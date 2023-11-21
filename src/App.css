@@ -1,38 +1,195 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Primary color = 1F4172
+Secondary color = 132043
+Tertiary color =F1B4BB */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #132043;
+  color: white;
   display: flex;
-  flex-direction: column;
+  flex: 0;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+#inputContainer img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  /* Add some spacing between input and image */
+}
+
+.searcBox img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  /* Add some spacing between input and image */
+}
+
+.usermanagementContainer {
+  padding: 10%;
+  width: 450px;
+  background-color: rgb(177, 193, 207);
+  border-radius: 30px;
+  color: #1F4172;
+
+
+}
+
+h2 {
+  align-self: center;
+  justify-content: center;
+  margin: 50px 130px;
+  width: 250px;
+  text-transform: capitalize;
+
+}
+
+.inputContainer {
+  align-items: center;
+  background-color: #132043;
+  width: 30;
+  height: 55px;
+  display: flex;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+#usermanagementInputs {
+  color: aliceblue;
+  padding-left: 20px;
+  font-size: larger;
+  width: 80%;
+}
+
+.searcBox {
+  background-color: aliceblue;
+  border: none;
+  width: 500px;
+  border-radius: 50px;
+  display: flex;
+  padding-right: 15px;
+  justify-content: space-evenly;
+}
+
+
+input {
+  background-color: #132043;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+input[type="submit"] {
+  color: aliceblue;
+  font-size: large;
+  margin-top: 50px;
+
+}
+
+#search-button {
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-left: 5%;
+}
+
+#read-results {
+  color: white;
+  margin-top: 20px;
+  background-color: #537896;
+  border-radius: 50px;
+  align-self: end;
+}
+
+#read-results:hover {
+
+  background-color: #F1B4BB;
+  color: #132043;
+
+}
+
+#search-input {
+  width: 400px;
+  background-color: aliceblue;
+  padding-left: 15px;
+  font-size: large;
+
+}
+
+/* ===============================================Navbar========================================== */
+/* Colors */
+:root {
+  --primary-color: #1F4172;
+  --secondary-color: #132043;
+  --tertiary-color: #F1B4BB;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+  padding: 40px;
+  z-index: 900;
+  height: 0px;
+  background-color: #537896;
+}
+
+/* Add styles for the active button */
+.active {
+  background-color: var(--primary-color);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-left {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-right {
+  display: flex;
+}
+
+.navbar-button:hover {
+  height: 60px;
+  background-color: #F1B4BB;
+  width: 100px;
+  color: #132043;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 30px;
+
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.navbar-button {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar-left {
+    margin-bottom: 10px;
   }
 }
